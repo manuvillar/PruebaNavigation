@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegador"
+    app:startDestination="@id/primerFagment">
+
+    <fragment
+        android:id="@+id/primerFagment"
+        android:name="com.example.pruebanavigation.PrimerFagment"
+        android:label="fragment_primer_fagment"
+        tools:layout="@layout/fragment_primer_fagment" >
+        <action
+            android:id="@+id/action_primerFagment_to_segundoFragment"
+            app:destination="@id/segundoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundoFragment"
+        android:name="com.example.pruebanavigation.SegundoFragment"
+        android:label="fragment_segundo"
+        tools:layout="@layout/fragment_segundo" >
+        <argument
+            android:name="cadena"
+            app:argType="string"
+            android:defaultValue="nula" />
+    </fragment>
+</navigation>
